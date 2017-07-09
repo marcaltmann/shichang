@@ -13,7 +13,7 @@ router.post('/', upload.single('file'), function(req, res, next) {
 
   logCsvFile(path);
 
-  res.send(`${req.file} respond with a resource`);
+  res.redirect('/');
 });
 
 function logCsvFile(filePath) {
