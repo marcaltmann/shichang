@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "experimental marketplace software",
   "main": "index.js",
+  "engines": {
+    "node": ">=6 <7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/marcaltmann/shichang/issues"
   },
-  "homepage": "https://github.com/marcaltmann/shichang#readme"
+  "homepage": "https://github.com/marcaltmann/shichang#readme",
+  "dependencies": {
+    "csv": "^1.1.1"
+  }
 }
