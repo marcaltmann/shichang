@@ -8,12 +8,12 @@ router.get('/', function(req, res, next) {
     if (err) {
       console.log(err);
     } else {
-      let titles = articles.map(article => article.title);
+      let names = articles.map(article => article.name);
 
       res.render('search', {
         query: req.query.q,
-        numResults: titles.length,
-        titles: titles,
+        numResults: names.length,
+        names,
       });
     }
   });
