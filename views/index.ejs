@@ -10,6 +10,17 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
+    <form class="section" action="/search" method="get">
+      <div>
+        <input id="search-input" type="search" name="q" />
+        <button type="submit">
+          Search
+        </button>
+      </div>
+    </form>
+
+    <h3>CSV upload</h3>
+
     <form class="section" action="/upload" method="post" enctype="multipart/form-data">
       <div>
         <label for="file-input">CSV file</label>

@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 const index = require('./routes/index');
+const search = require('./routes/search');
 const upload = require('./routes/upload');
 const deleteAll = require('./routes/delete_all');
 const users = require('./routes/users');
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/search', search);
 app.use('/upload', upload);
 app.use('/deleteall', deleteAll);
 app.use('/users', users);
