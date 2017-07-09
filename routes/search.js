@@ -26,9 +26,8 @@ function findDocuments(query, callback) {
     .toArray()
     .then((result) => {
       callback(undefined, result);
+      db.close();
     }, callback);
-
-    db.close();
   }, callback);
 }
 
