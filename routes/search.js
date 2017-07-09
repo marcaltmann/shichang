@@ -5,13 +5,17 @@ const { MongoClient } = require('mongodb');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   findDocuments(req.query.q, (err, articles) => {
-    let titles = articles.map(article => article.title);
+    if (err) {
+      console.log(err);
+    } else {
+      let titles = articles.map(article => article.title);
 
-    res.render('search', {
-      query: req.query.q,
-      numResults: titles.length,
-      titles: titles,
-    });
+      res.render('search', {
+        query: req.query.q,
+        numResults: titles.length,
+        titles: titles,
+      });
+    }
   });
 });
 
