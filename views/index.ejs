@@ -9,5 +9,17 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="file-input">CSV file</label>
+        <input id="file-input" type="file" name="file" accept="text/csv, application/csv, .csv" />
+      </div>
+      <div>
+        <button type="submit">
+          Submit
+        </button>
+      </div>
+    </for>
   </body>
 </html>
